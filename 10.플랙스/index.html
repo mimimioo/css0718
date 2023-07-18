@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>플랙스</title>
+    <style>
+      body {
+        background-color: #ffeead;
+        margin: 10px;
+      }
+      .container div {
+        padding: 10px;
+        text-align: center;
+        font-size: 2em;
+        /* em은 기존 폰트사이즈 */
+        color: #ffeead;
+      }
+      .home {
+        background-color: #96ceb4;
+        margin-right: auto;
+        flex: 1;
+        order: 2;
+      }
+      .search {
+        background-color: #ff6f69;
+        flex: 2;
+        order: 1;
+      }
+      .logout {
+        background-color: skyblue;
+        flex: 1;
+        order: 3;
+      }
+      .container {
+        border: 5px solid #ffcc5c;
+        display: flex;
+        justify-content: right;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="container">
+      <div class="home">Home</div>
+      <div class="search">Search</div>
+      <div class="logout">Logout</div>
+    </nav>
+
+    <div class="home">
+      <div class="search">
+        <div class="logout"></div>
+      </div>
+    </div>
+  </body>
+</html>

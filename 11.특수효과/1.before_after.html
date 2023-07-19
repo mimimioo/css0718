@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상선택자</title>
+    <style>
+      body {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        background-color: #333;
+        color: #fff;
+        margin: 0;
+      }
+      .is-required::before {
+        content: "⭐";
+        color: white;
+        padding-right: 2px;
+      }
+      .is-required::after {
+        content: "⭐";
+        color: white;
+        padding-left: 2px;
+      }
+      /* 2 */
+      header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        /* 헤더 중앙에 올때 height중요
+        vh vw는 화면의 % */
+      }
+      header h1 {
+        /* px은 정확한 길이, rem은 16px, em 현재 폰트 사이즈 */
+        font-size: 6rem;
+        margin: 1rem;
+      }
+      header::before {
+        content: "";
+        background: url("https://source.unsplash.com/1600x900/?nature,water")
+          no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /*투명도를 줘서 검은색이 비치도록 */
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <label class="is-required" for="name">이름</label>
+    <input type="text" id="name" /> -->
+    <header>
+      <h1>Hello World</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, eius!</p>
+    </header>
+  </body>
+</html>
